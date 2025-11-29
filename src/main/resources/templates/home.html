@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <title>Spring Tailwind Css</title>
+</head>
+
+<body class="">
+
+  <header class="w-full shadow-sm">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+          <span class="text-white font-bold text-lg">a</span>
+        </div>
+        <span class="text-red-600 text-xl font-semibold">b</span>
+        <img src="https://cdn-icons-png.flaticon.com/128/5266/5266275.png" height="48" width="48" alt="" srcset="">
+      </div>
+
+      <!-- Menu Desktop -->
+      <ul class="hidden md:flex items-center gap-8 text-gray-800 font-bold">
+        <li><a href="#" class="hover:text-red-600">Home</a></li>
+        <li><a href="#" class="hover:text-red-600">About</a></li>
+        <li><a href="#" class="hover:text-red-600">Features</a></li>
+        <li><a href="#" class="hover:text-red-600">Pricing</a></li>
+        <li><a href="#" class="hover:text-red-600">Team</a></li>
+      </ul>
+
+      <!-- Botão Desktop -->
+      <a href="#" class="hidden md:inline-block bg-red-500 text-white px-5 py-2 rounded-lg shadow hover:bg-red-600">
+        Login
+      </a>
+
+      <!-- Botão Hamburguer -->
+      <button id="menu-btn" class="block md:hidden text-red-600 focus:outline-none text-3xl">
+        ☰
+      </button>
+
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+      <ul class="flex flex-col gap-4 text-gray-800 text-lg">
+        <li><a href="#" class="text-red-600 font-medium">Home</a></li>
+        <li><a href="#" class="hover:text-red-600">About</a></li>
+        <li><a href="#" class="hover:text-red-600">Features</a></li>
+        <li><a href="#" class="hover:text-red-600">Pricing</a></li>
+        <li><a href="#" class="hover:text-red-600">Team</a></li>
+      </ul>
+
+      <a href="#" class="mt-4 inline-block w-full bg-red-500 text-white text-center py-2 rounded-lg shadow hover:bg-red-600">
+        Login
+      </a>
+    </div>
+  </header>
+
+  <script>
+    // Abrir / Fechar menu mobile
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+
+
+</html>
